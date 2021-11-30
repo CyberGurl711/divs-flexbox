@@ -11,7 +11,7 @@
    ========================================================================== */
 
 html {
-    color: #222;
+    color: #000;
     font-size: 1em;
     line-height: 1.4;
 }
@@ -103,35 +103,74 @@ html {
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
-  padding: 2em;
+  padding: 0 2em;
   font-size: 1em;
   height: 100%;
-  background-color: #000;
+  background-color: #fff;
 }
 
-.wrapper {
+header, footer {
+    background-color: #000;
+    color: #fff;
+    height: 60px;
+    width: 100%;
+}
+
+header {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 4rem;
+}
+
+main {
+    background-color: rgba(245, 194, 13, 0.82);
+    font-family: 'Josefin Sans';
+    font-size: 1.5rem;
+    height: 200px;
+    margin: 15px auto;
+    width: 100%;
+}
+
+header, footer, main {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+}
+
+.flex-container {
   /*add display:flex and set justify-content to space-between*/
   display: flex;
   justify-content: space-between;
-  font-weight: 700;
+  font-weight: 500;
+  flex-flow: row wrap;
 }
 
-.div-1, .div-2, .div-3 {
+.flex-items {
   /*give the divs a width of 30%, add display:flex, set justify-content and align-items to center*/
-  color: #fff;
+  color: #000;
+  background-color: #fff;
   display: flex;
   line-height: 1.5em;
   justify-content: center;
   align-items: center;
   font-size: 1.6em;
-  padding: 0 20px;
-  border-right: 1px solid #fff;
-  height: 300px;
+  padding: 20px;
+  border-right: 1px solid #000;
+  height: 250px;
   width: 30%;
-  margin: auto;
+  margin: 20px auto;
 }
-.div-3{
-    border: none;
+
+div#widget-3.flex-items{
+    border-right: none;
+}
+
+div#widget-3.flex-items span {
+    font-weight: bold;
+}
+
+div#widget-2.flex-items span {
+    font-weight: bold;
 }
 
 p {
@@ -139,6 +178,17 @@ p {
     font-size: 1.13rem;
 }
 
+#contact ul {
+    list-style-type: none;
+}
+
+#contact ul li {
+    display: inline-block;
+}
+
+#contact ul li a {
+    padding: 15px;
+}
 
 
 
